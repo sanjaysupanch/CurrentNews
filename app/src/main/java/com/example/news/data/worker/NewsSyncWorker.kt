@@ -5,15 +5,11 @@ import android.content.Context
 import androidx.annotation.RequiresPermission
 import androidx.hilt.work.HiltWorker
 import androidx.work.CoroutineWorker
-import androidx.work.OneTimeWorkRequestBuilder
-import androidx.work.WorkManager
 import androidx.work.WorkerParameters
-import com.example.news.BuildConfig
 import com.example.news.data.repository.NewsRepository
 import com.example.news.utils.NotificationHelper
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
-import java.util.concurrent.TimeUnit
 
 @HiltWorker
 class NewsSyncWorker @AssistedInject constructor(
@@ -38,16 +34,6 @@ class NewsSyncWorker @AssistedInject constructor(
                     title = "News Update",
                     message = "${newOnes.size} new articles available!"
                 )
-            }
-
-            // 🔥 TEST MODE RESCHEDULE (every 5 sec)
-            if (BuildConfig.DEBUG) {   // Ensures it only runs in debug
-                val next = OneTimeWorkRequestBuilder<NewsSyncWorker>()
-                    .setInitialDelay(5, TimeUnit.SECONDS)
-                    .build()
-
-                WorkManager.getInstance(applicationContext)
-                    .enqueue(next)
             }
 
             Result.success()

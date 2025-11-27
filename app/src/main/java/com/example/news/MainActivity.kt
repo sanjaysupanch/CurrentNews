@@ -9,7 +9,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.work.ExistingPeriodicWorkPolicy
-import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import com.example.news.data.worker.NewsSyncWorker
@@ -26,7 +25,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         NotificationHelper.createChannel(this)
 
-        scheduleBackgroundSync_TEST()
+        scheduleBackgroundSync()
         enableEdgeToEdge()
         setContent {
             NavigationBarMediumTheme {
@@ -39,15 +38,6 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-    }
-
-    private fun scheduleBackgroundSync_TEST() {
-        val request = OneTimeWorkRequestBuilder<NewsSyncWorker>()
-            .setInitialDelay(5, TimeUnit.SECONDS)
-            .build()
-
-        WorkManager.getInstance(this)
-            .enqueue(request)
     }
 
     private fun scheduleBackgroundSync() {

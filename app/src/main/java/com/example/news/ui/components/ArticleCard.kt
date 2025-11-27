@@ -20,6 +20,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -33,6 +34,7 @@ import coil.compose.AsyncImage
 import com.example.news.R
 import com.example.news.data.modal.Article
 import com.example.news.utils.Utils.shareArticle
+import java.time.OffsetDateTime
 
 @SuppressLint("LocalContextResourcesRead")
 @Composable
@@ -80,15 +82,22 @@ fun ArticleCard(
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.End
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 8.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
+                    val dateOnly = OffsetDateTime.parse(article.publishedAt)
+                        .toLocalDate()
+                        .toString()
+
                     Text(
-                        text = "Date: ${article.publishedAt ?: context.resources.getString(R.string.no_description)}",
+                        text = "Date: $dateOnly",
                         fontSize = 14.sp,
-                        color = MaterialTheme.colorScheme.primary,
-                        modifier = Modifier.clickable { onClick() }
+                        color = MaterialTheme.colorScheme.primary
                     )
+
                     Text(
                         text = "Read More...",
                         fontSize = 14.sp,

@@ -39,7 +39,8 @@
 
 ## Folder Structure
 
-![Screenshot 2025-03-02 at 6 31 41 AM](https://github.com/user-attachments/assets/6a89e5ef-1e22-4da5-a192-5cf2e58da031)
+<img width="588" height="1116" alt="Screenshot 2025-11-27 at 5 44 21 PM" src="https://github.com/user-attachments/assets/174100ac-9fb0-40fc-846b-9cb351661e1e" />
+
 
 * Follows Clean Architecture Principles.  
 * Separates concerns (UI, Data, Business Logic).  
@@ -90,10 +91,10 @@ The app fetches news articles using **NewsAPI**.
 
 ## App Demo
 
-* Link: https://drive.google.com/file/d/19vqCF-YW2tz67iwrc8-xeaLDZblfnu2t/view
+* Link: https://drive.google.com/file/d/19vqCF-YW2tz167iwrc8-xeaLDZblfnu2t/view
 
 ---
 
 ## APK Link
 
-* Link: https://drive.google.com/file/d/1FYhGfgJXtO2dRIZPVv4w3XwnRBw0S4vu/view?usp=sharing
+* Link: https://drive.google.com/file/d/1FYhGfgJXtO2dRIZPVv4w3XwnRBw0S14vu/view?usp=sharing

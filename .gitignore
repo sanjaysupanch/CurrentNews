@@ -1,0 +1,89 @@
+# =========================
+# ANDROID / ANDROID STUDIO
+# =========================
+
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# ARTIFACTS
+*.dex
+*.class
+*.o
+*.so
+*.jar
+*.aar
+
+# Build directories
+/build/
+**/build/
+captures/
+
+# Gradle
+.gradle/
+**/.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+gradle-app.setting
+
+# Local configuration
+local.properties
+local.settings
+*.iml
+
+# Keystore files (IMPORTANT: never commit signing keys)
+*.jks
+*.keystore
+*.pem
+*.p12
+
+# Android Studio specific
+/.idea/
+misc.xml
+workspace.xml
+modules.xml
+navEditor.xml
+assetWizardSettings.xml
+deploymentTargetDropDown.xml
+/gradleAppSetting
+
+# Jetpack Compose Preview
+*.preview
+
+# Log files
+*.log
+
+# Crashlytics / Firebase
+fabric.properties
+crashlytics.properties
+app/google-services.json
+app/google-services.plist
+
+# NDK / CMake
+.cxx/
+obj/
+
+# Kotlin
+*.kotlin_module
+
+# Generated files
+generated/
+out/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# IntelliJ
+*.ipr
+*.iws
+.idea_modules/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Cache
+.cache/

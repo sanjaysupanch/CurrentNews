@@ -84,6 +84,12 @@ fun ArticleCard(
                     horizontalArrangement = Arrangement.End
                 ) {
                     Text(
+                        text = "Date: ${article.publishedAt ?: context.resources.getString(R.string.no_description)}",
+                        fontSize = 14.sp,
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.clickable { onClick() }
+                    )
+                    Text(
                         text = "Read More...",
                         fontSize = 14.sp,
                         color = MaterialTheme.colorScheme.primary,

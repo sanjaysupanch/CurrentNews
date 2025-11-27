@@ -23,4 +23,8 @@ data class Article(
     val description: String = "",
     @SerialName("urlToImage")
     val urlToImage: String = "",
+    @SerialName("publishedAt")
+    val publishedAt: String = "",
+    @SerialName("content")
+    val content: String = ""
 )
